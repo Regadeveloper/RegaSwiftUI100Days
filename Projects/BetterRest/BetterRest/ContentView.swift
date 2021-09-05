@@ -21,7 +21,8 @@ struct ContentView: View {
                     Text ("\(sleepAmount, specifier: "%g") hours")
                 }
                 .padding()
-                DatePicker ("Please enter a time:", selection: $wakeUp, displayedComponents: .hourAndMinute)
+                DatePicker ("Please enter a time:", selection: $wakeUp, in: Date()...,
+                            displayedComponents: .hourAndMinute)
                     .datePickerStyle(WheelDatePickerStyle())
                     .labelsHidden()
                     .padding()
